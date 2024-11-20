@@ -1,33 +1,38 @@
-<div class="container">
-  <fieldset id="container">
-    <body> 
-  <script src="js.js"></script>
-    </body>
-    <head>
-      <link rel="stylesheet" href="styles.css"> 
-    </head>
-    <form name="calculator">
-      <input id="display" type="text" name="display" readonly>
-
-      <input class="button digits" type="button" value="7" onclick="calculator.display.value += '7'">
-      <input class="button digits" type="button" value="8" onclick="calculator.display.value += '8'">
-      <input class="button digits" type="button" value="9" onclick="calculator.display.value += '9'">
-      <input class="button mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '">
-      <br>
-      <input class="button digits" type="button" value="4" onclick="calculator.display.value += '4'">
-      <input class="button digits" type="button" value="5" onclick="calculator.display.value += '5'">
-      <input class="button digits" type="button" value="6" onclick="calculator.display.value += '6'">
-      <input class="button mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '">
-      <br>
-      <input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'">
-      <input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'">
-      <input class="button digits" type="button" value="3" onclick="calculator.display.value += '3'">
-      <input class="button mathButtons" type="button" value="x" onclick="calculator.display.value += ' * '">
-      <br>
-      <input id="clearButton" class="button" type="button" value="C" onclick="calculator.display.value = ''">
-      <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'">
-      <input class="button mathButtons" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
-      <input class="button mathButtons" type="button" value="/" onclick="calculator.display.value += ' / '">
-    </form>
-  </fieldset>
-</div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="unselectable" id="calculator">
+      <!-- Screen and C key -->
+      <div class="top">
+        <div id="display"></div>
+      </div>
+      <div class="keys">
+        <!-- keys -->
+        <span class="btn operator">+</span> 
+        <span class="btn operator">-</span> 
+        <span class="btn operator">×</span> 
+        <span class="btn operator">&divide;</span>
+        <span class="btn number">7</span> 
+        <span class="btn number">8</span> 
+        <span class="btn number">9</span> 
+        <span class="btn operator">&radic;</span>
+        <span class="btn number">4</span> 
+        <span class="btn number">5</span> 
+        <span class="btn number">6</span> 
+        <span class="btn operator">x<sup>y</sup></span>
+        <span class="btn number">1</span> 
+        <span class="btn number">2</span> 
+        <span class="btn number">3</span> 
+        <span class="btn " id="pnsign">+/-</span>
+        <span class="btn number">0</span> 
+        <span class="btn number">.</span> 
+        <span class="btn operator" id="eval">=</span> 
+        <span class="btn clear">C</span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js.js"> </script>
